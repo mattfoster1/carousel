@@ -1,79 +1,198 @@
-body, html, h1, input, label, .proj, .slide, .projHeader, .wrap, .inputWrap {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex; }
+* {
+    margin: 0;
+    padding: 0;
+}
 
-body, html {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  color: darkred;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  font-family: helvetica;
-  overflow: hidden; }
+li {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
 
-h1 {
-  margin: 0; }
+body {
+    height: 500px;
+    padding: 1px;
+}
 
-#page1 .wrap {
-  position: absolute;
-  width: 1480px; }
+#slideshow-wrap {
+    display: block;
+    height: 320px;
+    min-width: 260px;
+    max-width: 640px;
+    margin: auto;
+    border: 12px rgba(255,255,240,1) solid;
+    -webkit-box-shadow: 0px 0px 5px rgba(0,0,0,.8);
+    -moz-box-shadow: 0px 0px 5px rgba(0,0,0,.8);
+    box-shadow: 0px 0px 5px rgba(0,0,0,.8);
+    margin-top: 20px;
+    position: relative;
+}
 
-.proj {
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
-  background: goldenrod;
-  overflow: hidden;
-  text-align: center; }
+#slideshow-inner {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0);
+    overflow: hidden;
+    position: relative;
+}
 
-input {
-  z-index: 100;
-  cursor: pointer; }
+#slideshow-inner>ul {
+    list-style: none;
+    height: 100%;
+    width: 500%;
+    overflow: hidden;
+    position: relative;
+    left: 0px;
+    -webkit-transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
+    -moz-transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
+    -o-transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
+    transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
+}
 
-label {
-  width: 25vw;
-  cursor: pointer;
-  border: 1px solid black; }
+#slideshow-inner>ul>li {
+    width: 20%;
+    height: 320px;
+    float: left;
+    position: relative;
+}
 
-.slide {
-  min-width: 300px;
-  height: 150px;
-  margin-left: 35px; }
+#slideshow-inner>ul>li>img {
+    margin: auto;
+    height: 100%;
+}
 
-.slide-one {
-  border: 3px solid cyan; }
+#slideshow-wrap input[type=radio] {
+    position: absolute;
+    left: 50%;
+    bottom: 15px;
+    z-index: 100;
+    visibility: hidden;
+}
 
-.slide-two {
-  border: 3px solid magenta; }
+#slideshow-wrap label:not(.arrows) {
+    position: absolute;
+    left: 50%;
+    bottom: -45px;
+    z-index: 100;
+    width: 12px;
+    height: 12px;
+    /*background-color: rgba(200,200,200,1);*/
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,.8);
+    -moz-box-shadow: 0px 0px 3px rgba(0,0,0,.8);
+    box-shadow: 0px 0px 3px rgba(0,0,0,.8);
+    -webkit-transition: background-color .2s;
+    -moz-transition: background-color .2s;
+    -o-transition: background-color .2s;
+    transition: background-color .2s;
+}
 
-.slide-three {
-  border: 3px solid yellow; }
+#slideshow-wrap label:not(.arrows):active {
+    bottom: -46px 
+}
 
-.slide-four {
-  border: 3px solid black; }
+#slideshow-wrap input[type=radio]#button-1:checked~label[for=button-1] {
+    background-color: rgba(100,100,100,1) 
+}
 
-.projHeader {
-  width: 100%; }
+#slideshow-wrap input[type=radio]#button-2:checked~label[for=button-2] {
+    background-color: rgba(100,100,100,1) 
+}
 
-.wrap {
-  overflow: hidden;
-  text-align: center;
-  flex-direction: row;
-  width: 100%;
-  height: auto;
-  margin-top: 50px; }
+#slideshow-wrap input[type=radio]#button-3:checked~label[for=button-3] {
+    background-color: rgba(100,100,100,1) 
+}
 
-.inputWrap {
-  flex-direction: row;
-  justify-content: center;
-  width: auto; }
+#slideshow-wrap input[type=radio]#button-4:checked~label[for=button-4] {
+    background-color: rgba(100,100,100,1) 
+}
 
-/*# sourceMappingURL=index.css.map */
+#slideshow-wrap input[type=radio]#button-5:checked~label[for=button-5] {
+    background-color: rgba(100,100,100,1) 
+}
+
+#slideshow-wrap label[for=button-1] {
+    margin-left: -36px 
+}
+
+#slideshow-wrap label[for=button-2] {
+    margin-left: -18px 
+}
+
+#slideshow-wrap label[for=button-4] {
+    margin-left: 18px 
+}
+
+#slideshow-wrap label[for=button-5] {
+    margin-left: 36px 
+}
+
+#slideshow-wrap input[type=radio]#button-1:checked~#slideshow-inner>ul {
+    left: 0 
+}
+
+#slideshow-wrap input[type=radio]#button-2:checked~#slideshow-inner>ul {
+    left: -100% 
+}
+
+#slideshow-wrap input[type=radio]#button-3:checked~#slideshow-inner>ul {
+    left: -200% 
+}
+
+#slideshow-wrap input[type=radio]#button-4:checked~#slideshow-inner>ul {
+    left: -300% 
+}
+
+#slideshow-wrap input[type=radio]#button-5:checked~#slideshow-inner>ul {
+    left: -400% 
+}
+
+label.arrows {
+    font-family: 'WebSymbolsRegular';
+    font-size: 25px;
+    color: rgb(255,255,240);
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    display: none;
+    opacity: 0.7;
+    cursor: pointer;
+    z-index: 1000;
+    background-color: transparent;
+    -webkit-transition: opacity .2s;
+    -moz-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s;
+    text-shadow: 0px 0px 3px rgba(0,0,0,.8);
+}
+
+label.arrows:hover { opacity: 1 }
+
+label.arrows:active { margin-top: -23px }
+
+input[type=radio]#button-1:checked~.arrows#arrow-2, input[type=radio]#button-2:checked~.arrows#arrow-3, input[type=radio]#button-3:checked~.arrows#arrow-4, input[type=radio]#button-4:checked~.arrows#arrow-5 {
+    right: -55px;
+    display: block;
+}
+
+input[type=radio]#button-2:checked~.arrows#arrow-1, input[type=radio]#button-3:checked~.arrows#arrow-2, input[type=radio]#button-4:checked~.arrows#arrow-3, input[type=radio]#button-5:checked~.arrows#arrow-4 {
+    left: -55px;
+    display: block;
+    -webkit-transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+input[type=radio]#button-2:checked~.arrows#arrow-1 { left: -19px }
+
+input[type=radio]#button-3:checked~.arrows#arrow-2 { left: -37px }
+
+input[type=radio]#button-5:checked~.arrows#arrow-4 { left: -73px }
+
