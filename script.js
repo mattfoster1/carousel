@@ -19,27 +19,54 @@
 // }
 
 var currentSlide;
+var timer = 0;
+var controls = document.getElementsByName("controls");
+var goWhich;
 
 document.onkeydown = function(event) {
-	var controls = document.getElementsByName("controls");
+	
+	var newSlide = null;
+	timer = 0;
 
+	if (event.keyCode == 39) {
+		goWhich = "right";
+	} else if (event.keyCode == 37) {
+		goWhich = "left";
+	}
+
+	move(goWhich);	
+};
+
+
+
+var timeout = setInterval(function(){
+	timer++;
+	if (timer >= 5) {
+		move("right");
+		timer = 0;
+	}
+}, 1000)
+
+
+
+var move = function(goWhich) {
 	for (x=0; x < controls.length; x++) {
-		// console.log(controls[x].checked);
 		if (controls[x].checked == true) {
 			currentSlide = controls[x].id;
 			var currentSlideVal = parseInt(currentSlide.replace ( /[^\d.]/g, '' )); //get numeric value of ID
-			// console.log(currentSlide);
-
-			if (event.keyCode == 39 && currentSlideVal < 5) { //go right
+			if (goWhich == "right" && currentSlideVal < 5) { //go right
 				var newSlide = (currentSlide.slice(0, -1)) + (currentSlideVal + 1);
-				console.log(currentSlide + ", " + newSlide);
-
-			} else if (event.keyCode == 37 && currentSlideVal > 1) { //go left
+			// } else if (goWhich == "right" && currentSlideVal < 5) {
+			} else if (goWhich =="left" && currentSlideVal > 1) { //go left
 				var newSlide = (currentSlide.slice(0, -1)) + (currentSlideVal -1);
-				console.log(currentSlide + ", " + newSlide);
-			}
+				// console.log(currentSlide + ", " + newSlide);
+			} 
 		}
 	}
-	currentSlide.checked = false;
-	document.getElementById(newSlide).checked = true;
-};
+	if (newSlide) {
+		currentSlide.checked = false;
+		document.getElementById(newSlide).checked = true;
+	}
+}
+
+// task - set up a loop: 5 to one, one to 5
