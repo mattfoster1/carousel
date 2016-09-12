@@ -1,0 +1,79 @@
+body, html, h1, input, label, .proj, .slide, .projHeader, .wrap, .inputWrap {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; }
+
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: darkred;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-family: helvetica;
+  overflow: hidden; }
+
+h1 {
+  margin: 0; }
+
+#page1 .wrap {
+  position: absolute;
+  width: 1480px; }
+
+.proj {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  background: goldenrod;
+  overflow: hidden;
+  text-align: center; }
+
+input {
+  z-index: 100;
+  cursor: pointer; }
+
+label {
+  width: 25vw;
+  cursor: pointer;
+  border: 1px solid black; }
+
+.slide {
+  min-width: 300px;
+  height: 150px;
+  margin-left: 35px; }
+
+.slide-one {
+  border: 3px solid cyan; }
+
+.slide-two {
+  border: 3px solid magenta; }
+
+.slide-three {
+  border: 3px solid yellow; }
+
+.slide-four {
+  border: 3px solid black; }
+
+.projHeader {
+  width: 100%; }
+
+.wrap {
+  overflow: hidden;
+  text-align: center;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  margin-top: 50px; }
+
+.inputWrap {
+  flex-direction: row;
+  justify-content: center;
+  width: auto; }
+
+/*# sourceMappingURL=index.css.map */
