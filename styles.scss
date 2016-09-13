@@ -9,6 +9,21 @@
     align-items: center;
 }
 
+@mixin fadeIn {
+    -webkit-transition: background-color 1.2s ease;
+    -moz-transition: background-color 1.2s ease;
+    -o-transition: background-color 1.2s ease;
+	transition: background-color 1.2s ease;
+	background-color: rgba(100,100,100,1);
+}
+
+@mixin fadeOut {
+	-webkit-transition: background-color 0.8s ease;
+    -moz-transition: background-color 0.8s ease;
+    -o-transition: background-color 0.8s ease;
+	transition: background-color 0.8s ease;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -25,8 +40,13 @@ li {
     // align-items: center;
 }
 
+html, body {
+	height: 100%;
+	overflow: hidden;
+}
+
 body {
-    height: 500px;
+    // height: 500px;
     padding: 1px;
 }
 
@@ -87,11 +107,11 @@ body {
     min-width: 260px;
     max-width: 640px;
     margin: auto;
+    margin-top: 10%;
     border: 1px solid rgba(167,167,167,1);
     -webkit-box-shadow: 0px 0px 5px rgba(0,0,0,.8);
     -moz-box-shadow: 0px 0px 5px rgba(0,0,0,.8);
     box-shadow: 0px 0px 5px rgba(0,0,0,.8);
-    margin-top: 20px;
     position: relative;
 
 
@@ -129,39 +149,43 @@ body {
 	}
 
 	input[type=radio]#button-1:checked~label[for=button-1] {
-	    background-color: rgba(100,100,100,1);
+	    @include fadeIn;
 	}
 
 	input[type=radio]#button-2:checked~label[for=button-2] {
-	    background-color: rgba(100,100,100,1);
+	    @include fadeIn;
 	}
 
 	input[type=radio]#button-3:checked~label[for=button-3] {
-	    background-color: rgba(100,100,100,1);
+	    @include fadeIn;
 	}
 
 	input[type=radio]#button-4:checked~label[for=button-4] {
-	    background-color: rgba(100,100,100,1);
+	    @include fadeIn;
 	}
 
 	input[type=radio]#button-5:checked~label[for=button-5] {
-	    background-color: rgba(100,100,100,1);
+	    @include fadeIn;
 	}
 
 	label[for=button-1] {
 	    margin-left: -36px;
+	    @include fadeOut;
 	}
 
 	label[for=button-2] {
 	    margin-left: -18px;
+	    @include fadeOut;
 	}
 
 	label[for=button-4] {
 	    margin-left: 18px;
+	    @include fadeOut;
 	}
 
 	label[for=button-5] {
 	    margin-left: 36px;
+	    @include fadeOut;
 	}
 
 	input[type=radio]#button-1:checked~#slideshow-inner>ul {
