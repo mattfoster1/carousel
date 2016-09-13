@@ -19,11 +19,14 @@
 // }
 
 var currentSlide;
-var timer = 0;
+var timer = 2;
 var controls = document.getElementsByName("controls");
 var goWhich;
 
-document.onkeydown = function(event) {
+var label = [];
+var labels = document.getElementsByTagName("label");
+
+document.onkeydown = function(event) { //takes arrow key commands
 	
 	var newSlide = null;
 	timer = 0;
@@ -38,8 +41,7 @@ document.onkeydown = function(event) {
 };
 
 
-
-var timeout = setInterval(function(){
+var timeout = setInterval(function(){ //moves slides along every 5 secs
 	timer++;
 	if (timer >= 5) {
 		move("right");
@@ -48,18 +50,21 @@ var timeout = setInterval(function(){
 }, 1000)
 
 
-
 var move = function(goWhich) {
-	for (x=0; x < controls.length; x++) {
+	for (var x=0; x < controls.length; x++) {
 		if (controls[x].checked == true) {
 			currentSlide = controls[x].id;
 			var currentSlideVal = parseInt(currentSlide.replace ( /[^\d.]/g, '' )); //get numeric value of ID
 			if (goWhich == "right" && currentSlideVal < 5) { //go right
 				var newSlide = (currentSlide.slice(0, -1)) + (currentSlideVal + 1);
-			// } else if (goWhich == "right" && currentSlideVal < 5) {
+			} else if (goWhich == "right" && currentSlideVal == 5) {
+				var newSlide = (currentSlide.slice(0, -1)) + (1);
 			} else if (goWhich =="left" && currentSlideVal > 1) { //go left
 				var newSlide = (currentSlide.slice(0, -1)) + (currentSlideVal -1);
 				// console.log(currentSlide + ", " + newSlide);
+			} else if (goWhich == "left" && currentSlideVal == 1) {
+				var newSlide = (currentSlide.slice(0, -1)) + (5);
+				timer = -2;
 			} 
 		}
 	}
@@ -69,4 +74,11 @@ var move = function(goWhich) {
 	}
 }
 
-// task - set up a loop: 5 to one, one to 5
+window.onload = function() {
+	for (var x=0; x<labels.length; x++) { //goes through all items with tag 'label'
+		labels[x].onmouseup = function(){
+			timer = -1;
+			console.log("timer reset");
+		}
+	}
+}
