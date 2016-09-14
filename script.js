@@ -61,5 +61,3 @@ window.onload = function() {//resets timer after manual input from user (clickin
 		}
 	}
 }
-
-// TASK: bring back the arrows on slides one and five

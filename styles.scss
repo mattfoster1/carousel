@@ -237,8 +237,6 @@ label.arrows:hover {
 	// color: white;
  }
 
-label.arrows:active { margin-top: -23px }
-
 input[type=radio]#button-1:checked~.arrows#arrow-2, input[type=radio]#button-2:checked~.arrows#arrow-3, input[type=radio]#button-3:checked~.arrows#arrow-4, input[type=radio]#button-4:checked~.arrows#arrow-5, input[type=radio]#button-5:checked~.arrows#arrow-1 {
     right: 3px;
     display: block;
