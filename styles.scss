@@ -35,25 +35,20 @@ li {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-
-    // justify-content: center;
-    // align-items: center;
 }
 
 html, body {
 	height: 100%;
-	overflow: hidden;
+	overflow-x: hidden;
 }
 
 body {
-    // height: 500px;
-    padding: 1px;
+    // padding: 1px;
 }
 
-#slideshow-inner {
+.slideshow-inner {
     width: 100%;
     height: 100%;
-    // background-color: rgb(0,0,0);
     overflow: hidden;
     position: relative;
 
@@ -100,14 +95,13 @@ body {
 
 }
 
-#slideshow-wrap {
+.slideshow-wrap {
     display: block;
     height: 320px;
     width: 90%;
     min-width: 260px;
     max-width: 800px;
-    margin: auto;
-    margin-top: 10%;
+    margin: 40px auto 40px auto;
     border: 1px solid rgba(167,167,167,1);
     -webkit-box-shadow: 0px 0px 5px rgba(0,0,0,.8);
     -moz-box-shadow: 0px 0px 5px rgba(0,0,0,.8);
@@ -126,11 +120,10 @@ body {
 	label:not(.arrows) {
 	    position: absolute;
 	    left: 50%;
-	    bottom: -45px;
+	    bottom: 20px;
 	    z-index: 100;
 	    width: 12px;
 	    height: 12px;
-	    /*background-color: rgba(200,200,200,1);*/
 	    -webkit-border-radius: 50%;
 	    -moz-border-radius: 50%;
 	    border-radius: 50%;
@@ -168,6 +161,26 @@ body {
 	    @include fadeIn;
 	}
 
+	input[type=radio]#button-6:checked~label[for=button-1] {
+	    @include fadeIn;
+	}
+
+	input[type=radio]#button-7:checked~label[for=button-2] {
+	    @include fadeIn;
+	}
+
+	input[type=radio]#button-8:checked~label[for=button-3] {
+	    @include fadeIn;
+	}
+
+	input[type=radio]#button-9:checked~label[for=button-4] {
+	    @include fadeIn;
+	}
+
+	input[type=radio]#button-10:checked~label[for=button-5] {
+	    @include fadeIn;
+	}
+
 	label[for=button-1]:not(.arrows) {
 	    margin-left: -36px;
 	    @include fadeOut;
@@ -188,23 +201,43 @@ body {
 	    @include fadeOut;
 	}
 
-	input[type=radio]#button-1:checked~#slideshow-inner>ul {
+	label[for=button-6]:not(.arrows) {
+	    margin-left: -36px;
+	    @include fadeOut;
+	}
+
+	label[for=button-7]:not(.arrows) {
+	    margin-left: -18px;
+	    @include fadeOut;
+	}
+
+	label[for=button-8]:not(.arrows) {
+	    margin-left: 18px;
+	    @include fadeOut;
+	}
+
+	label[for=button-9]:not(.arrows) {
+	    margin-left: 36px;
+	    @include fadeOut;
+	}
+
+	input[type=radio]#button-1:checked~.slideshow-inner>ul {
 	    left: 0;
 	}
 
-	input[type=radio]#button-2:checked~#slideshow-inner>ul {
+	input[type=radio]#button-2:checked~.slideshow-inner>ul {
 	    left: -100%; 
 	}
 
-	input[type=radio]#button-3:checked~#slideshow-inner>ul {
+	input[type=radio]#button-3:checked~.slideshow-inner>ul {
 	    left: -200%;
 	}
 
-	input[type=radio]#button-4:checked~#slideshow-inner>ul {
+	input[type=radio]#button-4:checked~.slideshow-inner>ul {
 	    left: -300%;
 	}
 
-	input[type=radio]#button-5:checked~#slideshow-inner>ul {
+	input[type=radio]#button-5:checked~#slideshow-inner1>ul {
 	    left: -400%;
 	}
 
@@ -234,15 +267,17 @@ label.arrows {
 
 label.arrows:hover { 
 	opacity: 0.8;
-	// color: white;
  }
 
-input[type=radio]#button-1:checked~.arrows#arrow-2, input[type=radio]#button-2:checked~.arrows#arrow-3, input[type=radio]#button-3:checked~.arrows#arrow-4, input[type=radio]#button-4:checked~.arrows#arrow-5, input[type=radio]#button-5:checked~.arrows#arrow-1 {
+//below can be used to make animation for clicked arrows
+// label.arrows:active { margin-top: -23px } 
+
+input[type=radio]#button-1:checked~.arrows#arrow-2, input[type=radio]#button-2:checked~.arrows#arrow-3, input[type=radio]#button-3:checked~.arrows#arrow-4, input[type=radio]#button-4:checked~.arrows#arrow-5, input[type=radio]#button-5:checked~.arrows#arrow-1, input[type=radio]#button-6:checked~.arrows#arrow-7, input[type=radio]#button-7:checked~.arrows#arrow-8, input[type=radio]#button-8:checked~.arrows#arrow-9, input[type=radio]#button-9:checked~.arrows#arrow-10, input[type=radio]#button-10:checked~.arrows#arrow-6 {
     right: 3px;
     display: block;
 }
 
-input[type=radio]#button-1:checked~.arrows#arrow-5, input[type=radio]#button-2:checked~.arrows#arrow-1, input[type=radio]#button-3:checked~.arrows#arrow-2, input[type=radio]#button-4:checked~.arrows#arrow-3, input[type=radio]#button-5:checked~.arrows#arrow-4 {
+input[type=radio]#button-1:checked~.arrows#arrow-5, input[type=radio]#button-2:checked~.arrows#arrow-1, input[type=radio]#button-3:checked~.arrows#arrow-2, input[type=radio]#button-4:checked~.arrows#arrow-3, input[type=radio]#button-5:checked~.arrows#arrow-4, input[type=radio]#button-6:checked~.arrows#arrow-10, input[type=radio]#button-7:checked~.arrows#arrow-6, input[type=radio]#button-8:checked~.arrows#arrow-7, input[type=radio]#button-9:checked~.arrows#arrow-8, input[type=radio]#button-10:checked~.arrows#arrow-9 {
     left: 3px !important;
     display: block;
     -webkit-transform: scale(-0.6, 1);
@@ -252,9 +287,8 @@ input[type=radio]#button-1:checked~.arrows#arrow-5, input[type=radio]#button-2:c
     transform: scale(-0.6, 1);
 }
 
-input[type=radio]#button-2:checked~.arrows#arrow-1 { left: -19px }
+// input[type=radio]#button-2:checked~.arrows#arrow-1 { left: -19px } //these appear to be redundant
+// input[type=radio]#button-3:checked~.arrows#arrow-2 { left: -37px }
+// input[type=radio]#button-5:checked~.arrows#arrow-4 { left: -73px }
 
-input[type=radio]#button-3:checked~.arrows#arrow-2 { left: -37px }
-
-input[type=radio]#button-5:checked~.arrows#arrow-4 { left: -73px }
 

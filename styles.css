@@ -11,17 +11,14 @@ li {
 
 html, body {
   height: 100%;
-  overflow: hidden; }
+  overflow-x: hidden; }
 
-body {
-  padding: 1px; }
-
-#slideshow-inner {
+.slideshow-inner {
   width: 100%;
   height: 100%;
   overflow: hidden;
   position: relative; }
-  #slideshow-inner > ul {
+  .slideshow-inner > ul {
     list-style: none;
     height: 100%;
     width: 500%;
@@ -32,12 +29,12 @@ body {
     -moz-transition: left 1s ease-in-out;
     -o-transition: left 1s ease-in-out;
     transition: left 1s ease-in-out; }
-  #slideshow-inner > ul > li {
+  .slideshow-inner > ul > li {
     width: 20%;
     height: 320px;
     float: left;
     position: relative; }
-  #slideshow-inner > ul > li > img, #slideshow-inner > ul > li > div {
+  .slideshow-inner > ul > li > img, .slideshow-inner > ul > li > div {
     margin: auto;
     padding-bottom: 1%;
     width: 80%;
@@ -52,40 +49,38 @@ body {
     display: flex;
     justify-content: center;
     align-items: center; }
-  #slideshow-inner .greenSlide {
+  .slideshow-inner .greenSlide {
     color: white;
     background-color: #396; }
-  #slideshow-inner .blueSlide {
+  .slideshow-inner .blueSlide {
     color: white;
     background-color: #3679a9; }
 
-#slideshow-wrap {
+.slideshow-wrap {
   display: block;
   height: 320px;
   width: 90%;
   min-width: 260px;
   max-width: 800px;
-  margin: auto;
-  margin-top: 10%;
+  margin: 40px auto 40px auto;
   border: 1px solid #a7a7a7;
   -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
   -moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
   position: relative; }
-  #slideshow-wrap input[type=radio] {
+  .slideshow-wrap input[type=radio] {
     position: absolute;
     left: 50%;
     bottom: 15px;
     z-index: 100;
     visibility: hidden; }
-  #slideshow-wrap label:not(.arrows) {
+  .slideshow-wrap label:not(.arrows) {
     position: absolute;
     left: 50%;
-    bottom: -45px;
+    bottom: 20px;
     z-index: 100;
     width: 12px;
     height: 12px;
-    /*background-color: rgba(200,200,200,1);*/
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
@@ -97,71 +92,125 @@ body {
     -moz-transition: background-color .2s;
     -o-transition: background-color .2s;
     transition: background-color .2s; }
-    #slideshow-wrap label:not(.arrows) :active {
+    .slideshow-wrap label:not(.arrows) :active {
       bottom: -46px; }
-  #slideshow-wrap input[type=radio]#button-1:checked ~ label[for=button-1] {
+  .slideshow-wrap input[type=radio]#button-1:checked ~ label[for=button-1] {
     -webkit-transition: background-color 1.2s ease;
     -moz-transition: background-color 1.2s ease;
     -o-transition: background-color 1.2s ease;
     transition: background-color 1.2s ease;
     background-color: #646464; }
-  #slideshow-wrap input[type=radio]#button-2:checked ~ label[for=button-2] {
+  .slideshow-wrap input[type=radio]#button-2:checked ~ label[for=button-2] {
     -webkit-transition: background-color 1.2s ease;
     -moz-transition: background-color 1.2s ease;
     -o-transition: background-color 1.2s ease;
     transition: background-color 1.2s ease;
     background-color: #646464; }
-  #slideshow-wrap input[type=radio]#button-3:checked ~ label[for=button-3] {
+  .slideshow-wrap input[type=radio]#button-3:checked ~ label[for=button-3] {
     -webkit-transition: background-color 1.2s ease;
     -moz-transition: background-color 1.2s ease;
     -o-transition: background-color 1.2s ease;
     transition: background-color 1.2s ease;
     background-color: #646464; }
-  #slideshow-wrap input[type=radio]#button-4:checked ~ label[for=button-4] {
+  .slideshow-wrap input[type=radio]#button-4:checked ~ label[for=button-4] {
     -webkit-transition: background-color 1.2s ease;
     -moz-transition: background-color 1.2s ease;
     -o-transition: background-color 1.2s ease;
     transition: background-color 1.2s ease;
     background-color: #646464; }
-  #slideshow-wrap input[type=radio]#button-5:checked ~ label[for=button-5] {
+  .slideshow-wrap input[type=radio]#button-5:checked ~ label[for=button-5] {
     -webkit-transition: background-color 1.2s ease;
     -moz-transition: background-color 1.2s ease;
     -o-transition: background-color 1.2s ease;
     transition: background-color 1.2s ease;
     background-color: #646464; }
-  #slideshow-wrap label[for=button-1]:not(.arrows) {
+  .slideshow-wrap input[type=radio]#button-6:checked ~ label[for=button-1] {
+    -webkit-transition: background-color 1.2s ease;
+    -moz-transition: background-color 1.2s ease;
+    -o-transition: background-color 1.2s ease;
+    transition: background-color 1.2s ease;
+    background-color: #646464; }
+  .slideshow-wrap input[type=radio]#button-7:checked ~ label[for=button-2] {
+    -webkit-transition: background-color 1.2s ease;
+    -moz-transition: background-color 1.2s ease;
+    -o-transition: background-color 1.2s ease;
+    transition: background-color 1.2s ease;
+    background-color: #646464; }
+  .slideshow-wrap input[type=radio]#button-8:checked ~ label[for=button-3] {
+    -webkit-transition: background-color 1.2s ease;
+    -moz-transition: background-color 1.2s ease;
+    -o-transition: background-color 1.2s ease;
+    transition: background-color 1.2s ease;
+    background-color: #646464; }
+  .slideshow-wrap input[type=radio]#button-9:checked ~ label[for=button-4] {
+    -webkit-transition: background-color 1.2s ease;
+    -moz-transition: background-color 1.2s ease;
+    -o-transition: background-color 1.2s ease;
+    transition: background-color 1.2s ease;
+    background-color: #646464; }
+  .slideshow-wrap input[type=radio]#button-10:checked ~ label[for=button-5] {
+    -webkit-transition: background-color 1.2s ease;
+    -moz-transition: background-color 1.2s ease;
+    -o-transition: background-color 1.2s ease;
+    transition: background-color 1.2s ease;
+    background-color: #646464; }
+  .slideshow-wrap label[for=button-1]:not(.arrows) {
     margin-left: -36px;
     -webkit-transition: background-color 0.8s ease;
     -moz-transition: background-color 0.8s ease;
     -o-transition: background-color 0.8s ease;
     transition: background-color 0.8s ease; }
-  #slideshow-wrap label[for=button-2]:not(.arrows) {
+  .slideshow-wrap label[for=button-2]:not(.arrows) {
     margin-left: -18px;
     -webkit-transition: background-color 0.8s ease;
     -moz-transition: background-color 0.8s ease;
     -o-transition: background-color 0.8s ease;
     transition: background-color 0.8s ease; }
-  #slideshow-wrap label[for=button-4]:not(.arrows) {
+  .slideshow-wrap label[for=button-4]:not(.arrows) {
     margin-left: 18px;
     -webkit-transition: background-color 0.8s ease;
     -moz-transition: background-color 0.8s ease;
     -o-transition: background-color 0.8s ease;
     transition: background-color 0.8s ease; }
-  #slideshow-wrap label[for=button-5]:not(.arrows) {
+  .slideshow-wrap label[for=button-5]:not(.arrows) {
     margin-left: 36px;
     -webkit-transition: background-color 0.8s ease;
     -moz-transition: background-color 0.8s ease;
     -o-transition: background-color 0.8s ease;
     transition: background-color 0.8s ease; }
-  #slideshow-wrap input[type=radio]#button-1:checked ~ #slideshow-inner > ul {
+  .slideshow-wrap label[for=button-6]:not(.arrows) {
+    margin-left: -36px;
+    -webkit-transition: background-color 0.8s ease;
+    -moz-transition: background-color 0.8s ease;
+    -o-transition: background-color 0.8s ease;
+    transition: background-color 0.8s ease; }
+  .slideshow-wrap label[for=button-7]:not(.arrows) {
+    margin-left: -18px;
+    -webkit-transition: background-color 0.8s ease;
+    -moz-transition: background-color 0.8s ease;
+    -o-transition: background-color 0.8s ease;
+    transition: background-color 0.8s ease; }
+  .slideshow-wrap label[for=button-8]:not(.arrows) {
+    margin-left: 18px;
+    -webkit-transition: background-color 0.8s ease;
+    -moz-transition: background-color 0.8s ease;
+    -o-transition: background-color 0.8s ease;
+    transition: background-color 0.8s ease; }
+  .slideshow-wrap label[for=button-9]:not(.arrows) {
+    margin-left: 36px;
+    -webkit-transition: background-color 0.8s ease;
+    -moz-transition: background-color 0.8s ease;
+    -o-transition: background-color 0.8s ease;
+    transition: background-color 0.8s ease; }
+  .slideshow-wrap input[type=radio]#button-1:checked ~ .slideshow-inner > ul {
     left: 0; }
-  #slideshow-wrap input[type=radio]#button-2:checked ~ #slideshow-inner > ul {
+  .slideshow-wrap input[type=radio]#button-2:checked ~ .slideshow-inner > ul {
     left: -100%; }
-  #slideshow-wrap input[type=radio]#button-3:checked ~ #slideshow-inner > ul {
+  .slideshow-wrap input[type=radio]#button-3:checked ~ .slideshow-inner > ul {
     left: -200%; }
-  #slideshow-wrap input[type=radio]#button-4:checked ~ #slideshow-inner > ul {
+  .slideshow-wrap input[type=radio]#button-4:checked ~ .slideshow-inner > ul {
     left: -300%; }
-  #slideshow-wrap input[type=radio]#button-5:checked ~ #slideshow-inner > ul {
+  .slideshow-wrap input[type=radio]#button-5:checked ~ #slideshow-inner1 > ul {
     left: -400%; }
 
 label.arrows {
@@ -188,11 +237,11 @@ label.arrows {
 label.arrows:hover {
   opacity: 0.8; }
 
-input[type=radio]#button-1:checked ~ .arrows#arrow-2, input[type=radio]#button-2:checked ~ .arrows#arrow-3, input[type=radio]#button-3:checked ~ .arrows#arrow-4, input[type=radio]#button-4:checked ~ .arrows#arrow-5, input[type=radio]#button-5:checked ~ .arrows#arrow-1 {
+input[type=radio]#button-1:checked ~ .arrows#arrow-2, input[type=radio]#button-2:checked ~ .arrows#arrow-3, input[type=radio]#button-3:checked ~ .arrows#arrow-4, input[type=radio]#button-4:checked ~ .arrows#arrow-5, input[type=radio]#button-5:checked ~ .arrows#arrow-1, input[type=radio]#button-6:checked ~ .arrows#arrow-7, input[type=radio]#button-7:checked ~ .arrows#arrow-8, input[type=radio]#button-8:checked ~ .arrows#arrow-9, input[type=radio]#button-9:checked ~ .arrows#arrow-10, input[type=radio]#button-10:checked ~ .arrows#arrow-6 {
   right: 3px;
   display: block; }
 
-input[type=radio]#button-1:checked ~ .arrows#arrow-5, input[type=radio]#button-2:checked ~ .arrows#arrow-1, input[type=radio]#button-3:checked ~ .arrows#arrow-2, input[type=radio]#button-4:checked ~ .arrows#arrow-3, input[type=radio]#button-5:checked ~ .arrows#arrow-4 {
+input[type=radio]#button-1:checked ~ .arrows#arrow-5, input[type=radio]#button-2:checked ~ .arrows#arrow-1, input[type=radio]#button-3:checked ~ .arrows#arrow-2, input[type=radio]#button-4:checked ~ .arrows#arrow-3, input[type=radio]#button-5:checked ~ .arrows#arrow-4, input[type=radio]#button-6:checked ~ .arrows#arrow-10, input[type=radio]#button-7:checked ~ .arrows#arrow-6, input[type=radio]#button-8:checked ~ .arrows#arrow-7, input[type=radio]#button-9:checked ~ .arrows#arrow-8, input[type=radio]#button-10:checked ~ .arrows#arrow-9 {
   left: 3px !important;
   display: block;
   -webkit-transform: scale(-0.6, 1);
@@ -200,14 +249,5 @@ input[type=radio]#button-1:checked ~ .arrows#arrow-5, input[type=radio]#button-2
   -ms-transform: scale(-0.6, 1);
   -o-transform: scale(-0.6, 1);
   transform: scale(-0.6, 1); }
-
-input[type=radio]#button-2:checked ~ .arrows#arrow-1 {
-  left: -19px; }
-
-input[type=radio]#button-3:checked ~ .arrows#arrow-2 {
-  left: -37px; }
-
-input[type=radio]#button-5:checked ~ .arrows#arrow-4 {
-  left: -73px; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -44,7 +44,7 @@ var move = function(goWhich) {
 			} else if (goWhich == "left" && currentSlideVal == 1) {// go to cell 5 from 1
 				var newSlide = (currentSlide.slice(0, -1)) + (5);
 				timer = -2;
-			} 
+			} // TASK - add to these if / elses the criteria that will allow a currentSlideVal of between 6-10, for the second carousel
 		}
 	}
 	if (newSlide) { //applies changes
