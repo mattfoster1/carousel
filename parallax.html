@@ -7,8 +7,8 @@
 		<link href="https://fonts.googleapis.com/css?family=Arvo|Cabin|Hind|Noto+Serif|Bree+Serif" rel="stylesheet">
 		<title>Carousel</title>
 	</head>
-	<body>
-	    <div id="slideshow-wrap">
+	<body id="body_plx">
+	    <div id="slideshow-wrap" class="slideshow_plx">
 	        <input type="radio" id="button-1" name="controls" checked="checked"/>
 	        <label for="button-1"></label>
 	        <input type="radio" id="button-2" name="controls"/>
@@ -26,31 +26,38 @@
 	        <label for="button-5" class="arrows" id="arrow-5">></label>
 	        <div id="slideshow-inner">
 	            <ul>
-	                <li id="slide1">
+	                <li id="slide1" class="greenSlide">
 	                    <!-- <img draggable="false" src="images/1.png" /> -->
-	                    <div draggable="false">Isn't this a lovely carousel?</div>
+	                    <div draggable="false">This one's a little different</div>
 	                </li>
-	                <li id="slide2" class="greenSlide">
+	                <li id="slide2">
 	                    <!-- <img draggable="false" src="images/2.png" /> -->
-	                    <div draggable="false" >It even has a timer</div>
+	                    <div draggable="false" >Text2</div>
 	                </li>
 	                <li id="slide3">
 	                    <!-- <img draggable="false" src="images/3.png" /> -->
-	                    <div draggable="false">Such pretty animations</div>
+	                    <div draggable="false">Text3</div>
 	                </li>
 	                <li id="slide4" class="blueSlide">
 	                    <!-- <img draggable="false" src="images/4.png" /> -->
-	                    <div draggable="false" >Try your arrow keys!</div>
+	                    <div draggable="false" >Text4</div>
 	                </li>
 	                <li id="slide5">
 	                    <!-- <img draggable="false" src="images/5.png" /> -->
-	                    <div draggable="false">Oh, and it loops too</div>
+	                    <div draggable="false">Text5</div>
 	                </li>
 	            </ul>
-	        </div> <!-- end of slideshow-inner -->
-	    </div> <!-- end of slideshow wrap -->
-	    <button class="nextSlide"> <a href="parallax.html"/>Next Carousel
-	    	<div class="undSlide" style="margin:auto;"></div>
-	    </button>
+	        </div>
+	    </div>
+	    <div>
+		     <button class="nextSlide">
+		     	<a href="index.html"/>Previous Carousel
+		    	<div class="undSlide" style="margin-left: auto;"></div>
+		    </button>
+		     <button class="nextSlide">
+		     	<a href="parallax.html"/>Next Carousel
+		    	<div class="undSlide"></div>
+		    </button>
+	    </div>
 	</body>
 </html>
