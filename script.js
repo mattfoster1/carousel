@@ -22,7 +22,7 @@ document.onkeydown = function(event) { //takes arrow key commands
 
 
 var timeout = setInterval(function(){ //moves slides along every 5 secs
-	timer++;
+	// timer++;
 	if (timer >= 5) {
 		move("right");
 		timer = 0;

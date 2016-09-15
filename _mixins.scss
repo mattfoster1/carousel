@@ -1,0 +1,57 @@
+@mixin flex_center {
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-plain {
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+@mixin fadeIn {
+    -webkit-transition: background-color 1.2s ease;
+    -moz-transition: background-color 1.2s ease;
+    -o-transition: background-color 1.2s ease;
+	transition: background-color 1.2s ease;
+	background-color: rgba(100,100,100,1);
+}
+
+@mixin fadeOut {
+	-webkit-transition: background-color 0.8s ease;
+    -moz-transition: background-color 0.8s ease;
+    -o-transition: background-color 0.8s ease;
+	transition: background-color 0.8s ease;
+}
+
+@mixin fullBoxShadow {
+	-webkit-box-shadow: 0 0 0px gray inset, 0 0 3px #1d1d1d;
+   	-moz-box-shadow: 0 0 0px gray inset, 0 0 3px #1d1d1d;
+    box-shadow: 0 0 0px gray inset, 0 0 3px #1d1d1d;
+
+    -webkit-transition: box-shadow .5s ease-in;
+    -moz-transition: box-shadow .5s ease-in;
+    -o-transition: box-shadow .5s ease-in;
+    transition: box-shadow .5s ease-in;
+}
+
+@mixin left_trans {
+    -webkit-transition: left 1s ease-in-out;
+    -moz-transition: left 1s ease-in-out;
+    -o-transition: left 1s ease-in-out;
+    transition: left 1s ease-in-out;
+}
+
+@mixin card_boxShad {
+    -webkit-box-shadow: 2px 0px 10px gray;
+    -moz-box-shadow: 2px 0px 10px gray;
+    box-shadow: 2px 0px 10px gray;
+}

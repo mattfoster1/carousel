@@ -1,49 +1,6 @@
 @import "_animations.scss";
-
-@mixin flex_center {
-	display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-}
-
-@mixin flex-plain {
-	display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-}
-
-@mixin fadeIn {
-    -webkit-transition: background-color 1.2s ease;
-    -moz-transition: background-color 1.2s ease;
-    -o-transition: background-color 1.2s ease;
-	transition: background-color 1.2s ease;
-	background-color: rgba(100,100,100,1);
-}
-
-@mixin fadeOut {
-	-webkit-transition: background-color 0.8s ease;
-    -moz-transition: background-color 0.8s ease;
-    -o-transition: background-color 0.8s ease;
-	transition: background-color 0.8s ease;
-}
-
-@mixin fullBoxShadow {
-	-webkit-box-shadow: 0px 0px 3px rgba(150,150,150,.8) inset, 0 0 0px gray;
-   	-moz-box-shadow: 0px 0px 3px rgba(150,150,150,.8) inset, 0 0 0px gray;
-    box-shadow: 0px 0px 3px rgba(80,80,80,1) inset, 0 0 0px gray;
-
-    -webkit-transition: box-shadow .5s ease-in;
-    -moz-transition: box-shadow .5s ease-in;
-    -o-transition: box-shadow .5s ease-in;
-    transition: box-shadow .5s ease-in;
-}
+@import "_mixins.scss";
+@import "_parallax.scss";
 
 * {
     margin: 0;
@@ -76,7 +33,7 @@ body {
     justify-content: space-around;
     align-items: center;
     @include flex_plain;
-
+    min-width: 700px;
 }
 
 #slideshow-inner {
@@ -104,6 +61,7 @@ body {
 	    height: 320px;
 	    float: left;
 	    position: relative;
+	    background-color: white;
 	}
 
 	>ul>li>img, >ul>li>div {
@@ -128,6 +86,11 @@ body {
 		background-color: #3679a9;
 	}
 
+	.redSlide {
+		color: white;
+		background-color: #c42b2b;
+	}
+
 }
 
 #slideshow-wrap {
@@ -135,7 +98,7 @@ body {
     height: 320px;
     width: 90%;
     min-width: 260px;
-    max-width: 800px;
+    max-width: 1200px;
     margin: 100px auto 0px auto;
     border: 1px solid rgba(167,167,167,1);
     -webkit-box-shadow: 0px 0px 5px rgba(0,0,0,.8);
@@ -238,48 +201,6 @@ body {
 	}
 }
 
-// parallax page
-#body_plx .slideshow_plx {
-
-	label:not(.arrows) {
-		box-shadow: 0 0 0px gray inset, 0 0 3px gray;
-		border: 0.5px solid rgba(192,192,192,1);
-
-	    -webkit-transition: box-shadow .5s ease-out;
-	    -moz-transition: box-shadow .5s ease-out;
-	    -o-transition: box-shadow .5s ease-out;
-	    transition: box-shadow .5s ease-out;
-	}	
-
-	input[type=radio]#button-1:checked~label[for=button-1] {
-		background-color: rgb(250, 250, 250);
-		@include fullBoxShadow;
-		border-color: rgba(192,192,192,0.5);
-	}
-
-	input[type=radio]#button-2:checked~label[for=button-2] {
-		background-color: white;
-		@include fullBoxShadow;
-		border-color: rgba(192,192,192,0.5);
-	}
-
-	input[type=radio]#button-3:checked~label[for=button-3] {
-		background-color: white;
-		@include fullBoxShadow;
-		border-color: rgba(192,192,192,0.5);
-	}
-
-	input[type=radio]#button-4:checked~label[for=button-4] {
-		background-color: white;
-		@include fullBoxShadow;
-	}
-
-	input[type=radio]#button-5:checked~label[for=button-5] {
-		background-color: white;
-		@include fullBoxShadow;
-	}
-}
-
 label.arrows {
     font-family: 'WebSymbolsRegular';
     font-size: 70px;
@@ -332,7 +253,7 @@ input[type=radio]#button-1:checked~.arrows#arrow-5, input[type=radio]#button-2:c
 	padding: 10px;
 	border: 0;
 	margin: 0 30px;
-	font-family: Bree Serif;
+	font-family: Noto sans;
 	letter-spacing: 3px;
 
 	.undSlide {

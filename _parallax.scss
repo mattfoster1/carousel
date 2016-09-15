@@ -1,0 +1,107 @@
+#body_plx .slideshow_plx {
+
+	ul {
+		width: auto;
+	}
+
+	ul>li {
+		float: none;
+		left: 0%;
+		width: 100%;
+		@include left_trans;
+		// box-shadow: 2px 0px 10px black;
+	}
+
+	ul>li>img, ul>li>div {
+	    font-size: 50px;
+	    font-family: cabin;
+	    letter-spacing: 2px;
+	}
+
+	#slideshow-inner ul>li {
+		position: absolute;
+	}
+
+	label:not(.arrows) {
+		-webkit-box-shadow: 0px 0px 3px #989898 inset, 0 0 0px gray;
+	   	-moz-box-shadow: 0px 0px 3px #989898 inset, 0 0 0px gray;
+	    box-shadow: 0px 0px 3px #989898 inset, 0 0 0px gray;
+		
+		border: 0.5px solid rgba(192,192,192,1);
+
+	    -webkit-transition: box-shadow .5s ease-out;
+	    -moz-transition: box-shadow .5s ease-out;
+	    -o-transition: box-shadow .5s ease-out;
+	    transition: box-shadow .5s ease-out;
+	}	
+
+	input[type=radio]#button-1:checked~label[for=button-1] {
+		background-color: rgb(250, 250, 250);
+		@include fullBoxShadow;
+		border-color: rgba(192,192,192,0.5);
+	}
+
+	input[type=radio]#button-2:checked~label[for=button-2] {
+		background-color: white;
+		@include fullBoxShadow;
+		border-color: rgba(192,192,192,0.5);
+	}
+
+	input[type=radio]#button-3:checked~label[for=button-3] {
+		background-color: white;
+		@include fullBoxShadow;
+		border-color: rgba(192,192,192,0.5);
+	}
+
+	input[type=radio]#button-4:checked~label[for=button-4] {
+		background-color: white;
+		@include fullBoxShadow;
+	}
+
+	input[type=radio]#button-5:checked~label[for=button-5] {
+		background-color: white;
+		@include fullBoxShadow;
+	}
+
+	input[type=radio]#button-1:checked~#slideshow-inner {
+		>ul { left: 0; }
+		>ul { left: 0; }
+	    >ul>li { @include card_boxShad; }
+	}
+
+	input[type=radio]#button-2:checked~#slideshow-inner {
+		>ul { left: 0; }
+	    >ul>li { @include card_boxShad; }
+		#slide1 { left: -99%; }
+	}
+
+	input[type=radio]#button-3:checked~#slideshow-inner {
+		>ul { left: 0; }
+	    >ul>li { @include card_boxShad; }
+		#slide1{ left: -150%; }
+		#slide2 { left: -99%; }
+	}
+
+	input[type=radio]#button-4:checked~#slideshow-inner {
+		>ul { left: 0; }
+	    >ul>li { @include card_boxShad; }
+	    #slide1 { left: -130%; }
+	    #slide2 { left: -150%; }
+	    #slide3 { left: -99%; }
+	}
+
+	input[type=radio]#button-5:checked~#slideshow-inner {
+		>ul { left: 0; }
+	    >ul>li { @include card_boxShad; }
+	    #slide1 { left: -130%; }
+	    #slide2 { left: -120%; }
+	    #slide3 { left: -110%; }
+	    #slide4 { left: -99%; }
+	}
+
+	#slide1 { z-index: 5; }
+	#slide2 { z-index: 4; }
+	#slide3 { z-index: 3; }
+	#slide4 { z-index: 2; }
+	#slide5 { z-index: 1; }
+}
