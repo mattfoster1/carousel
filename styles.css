@@ -180,6 +180,42 @@
   letter-spacing: 2px; }
 #body_plx .slideshow_plx #slideshow-inner ul > li {
   position: absolute; }
+#body_plx .slideshow_plx .arrowMask {
+  position: absolute;
+  width: 60px;
+  height: 60%;
+  top: 12%;
+  z-index: 10;
+  border-top: 70px solid transparent;
+  border-bottom: 70px solid transparent;
+  border-radius: 7px;
+  height: 100px;
+  width: 0px;
+  -webkit-transition: background-color 1s ease;
+  -moz-transition: background-color 1s ease;
+  -o-transition: background-color 1s ease;
+  transition: border .6s ease; }
+#body_plx .slideshow_plx .arrowMask_L {
+  left: 10px;
+  border-right: 0px solid transparent; }
+#body_plx .slideshow_plx .arrowMask_R {
+  right: 10px;
+  border-left: 0px solid transparent; }
+#body_plx .slideshow_plx input[type=radio]#button-1:checked ~ .arrows#arrow-2, #body_plx .slideshow_plx input[type=radio]#button-2:checked ~ .arrows#arrow-3, #body_plx .slideshow_plx input[type=radio]#button-3:checked ~ .arrows#arrow-4, #body_plx .slideshow_plx input[type=radio]#button-4:checked ~ .arrows#arrow-5, #body_plx .slideshow_plx input[type=radio]#button-5:checked ~ .arrows#arrow-1 {
+  right: 15px;
+  display: block; }
+  #body_plx .slideshow_plx input[type=radio]#button-1:checked ~ .arrows#arrow-2:hover ~ .arrowMask_R, #body_plx .slideshow_plx input[type=radio]#button-2:checked ~ .arrows#arrow-3:hover ~ .arrowMask_R, #body_plx .slideshow_plx input[type=radio]#button-3:checked ~ .arrows#arrow-4:hover ~ .arrowMask_R, #body_plx .slideshow_plx input[type=radio]#button-4:checked ~ .arrows#arrow-5:hover ~ .arrowMask_R, #body_plx .slideshow_plx input[type=radio]#button-5:checked ~ .arrows#arrow-1:hover ~ .arrowMask_R {
+    border-left: 50px solid rgba(255, 255, 255, 0.1); }
+#body_plx .slideshow_plx input[type=radio]#button-1:checked ~ .arrows#arrow-5, #body_plx .slideshow_plx input[type=radio]#button-2:checked ~ .arrows#arrow-1, #body_plx .slideshow_plx input[type=radio]#button-3:checked ~ .arrows#arrow-2, #body_plx .slideshow_plx input[type=radio]#button-4:checked ~ .arrows#arrow-3, #body_plx .slideshow_plx input[type=radio]#button-5:checked ~ .arrows#arrow-4 {
+  left: 15px !important;
+  display: block;
+  -webkit-transform: scale(-0.6, 1);
+  -moz-transform: scale(-0.6, 1);
+  -ms-transform: scale(-0.6, 1);
+  -o-transform: scale(-0.6, 1);
+  transform: scale(-0.6, 1); }
+  #body_plx .slideshow_plx input[type=radio]#button-1:checked ~ .arrows#arrow-5:hover ~ .arrowMask_L, #body_plx .slideshow_plx input[type=radio]#button-2:checked ~ .arrows#arrow-1:hover ~ .arrowMask_L, #body_plx .slideshow_plx input[type=radio]#button-3:checked ~ .arrows#arrow-2:hover ~ .arrowMask_L, #body_plx .slideshow_plx input[type=radio]#button-4:checked ~ .arrows#arrow-3:hover ~ .arrowMask_L, #body_plx .slideshow_plx input[type=radio]#button-5:checked ~ .arrows#arrow-4:hover ~ .arrowMask_L {
+    border-right: 50px solid rgba(255, 255, 255, 0.1); }
 #body_plx .slideshow_plx label:not(.arrows) {
   -webkit-box-shadow: 0px 0px 3px #989898 inset, 0 0 0px gray;
   -moz-box-shadow: 0px 0px 3px #989898 inset, 0 0 0px gray;
