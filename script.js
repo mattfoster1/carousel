@@ -13,11 +13,11 @@ document.onkeydown = function(event) { //takes arrow key commands
 
 	if (event.keyCode == 39) {
 		goWhich = "right";
+		move(goWhich);
 	} else if (event.keyCode == 37) {
 		goWhich = "left";
-	}
-
-	move(goWhich);	
+		move(goWhich);
+	}		
 };
 
 

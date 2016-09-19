@@ -4,11 +4,11 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="styles.css">
 		<script src="script.js" type="text/javascript"></script>
-		<link href="https://fonts.googleapis.com/css?family=Arvo|Cabin|Hind|Noto+Serif|Noto+Sans|Bree+Serif" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Arvo|Cabin|Hind|Noto+Serif|Noto+Sans|Bree+Serif|Arimo" rel="stylesheet">
 		<title>Carousel</title>
 	</head>
-	<body>
-	    <div id="slideshow-wrap">
+	<body id="body_vert">
+	    <div id="slideshow-wrap" class="slideshow_vert">
 	        <input type="radio" id="button-1" name="controls" checked="checked"/>
 	        <label for="button-1"></label>
 	        <input type="radio" id="button-2" name="controls"/>
@@ -19,38 +19,40 @@
 	        <label for="button-4"></label>
 	        <input type="radio" id="button-5" name="controls"/>
 	        <label for="button-5"></label>
-	        <label for="button-1" class="arrows" id="arrow-1">></label>
-	        <label for="button-2" class="arrows" id="arrow-2">></label>
-	        <label for="button-3" class="arrows" id="arrow-3">></label>
-	        <label for="button-4" class="arrows" id="arrow-4">></label>
-	        <label for="button-5" class="arrows" id="arrow-5">></label>
 	        <div id="slideshow-inner">
 	            <ul>
-	                <li id="slide1">
+	                <li id="slide1" class="blueSlide" >
 	                    <!-- <img draggable="false" src="images/1.png" /> -->
-	                    <div draggable="false">Isn't this a lovely carousel?</div>
+	                    <div draggable="false">This one's top to bottom</div>
 	                </li>
-	                <li id="slide2" class="greenSlide">
+	                <li id="slide2" class="purpleSlide">
 	                    <!-- <img draggable="false" src="images/2.png" /> -->
-	                    <div draggable="false" >It even has a timer</div>
+	                    <div draggable="false">and there's some new animations too</div>
 	                </li>
-	                <li id="slide3">
+	                <li id="slide3" class="greenSlide">
 	                    <!-- <img draggable="false" src="images/3.png" /> -->
-	                    <div draggable="false">Such pretty animations</div>
+	                    <div draggable="false">as well as a nice 'deck-of-cards' effect</div>
 	                </li>
-	                <li id="slide4" class="blueSlide">
+	                <li id="slide4">
 	                    <!-- <img draggable="false" src="images/4.png" /> -->
-	                    <div draggable="false" >Try your arrow keys!</div>
+	                    <div draggable="false">Lorem ipsum thingy thing</div>
 	                </li>
-	                <li id="slide5">
+	                <li id="slide5" class="redSlide">
 	                    <!-- <img draggable="false" src="images/5.png" /> -->
-	                    <div draggable="false">Oh, and it loops too</div>
+	                    <div draggable="false">gosh aren't these hard to fill</div>
 	                </li>
 	            </ul>
-	        </div> <!-- end of slideshow-inner -->
-	    </div> <!-- end of slideshow wrap -->
-	    <button class="nextSlide"> <a href="vert.html"/>Next Carousel
-	    	<div class="undSlide" style="margin:auto;"></div>
-	    </button>
+	        </div>
+	    </div>
+	    <div>
+		     <button class="nextSlide">
+		     	<a href="index.html"/>Previous Carousel
+		    	<div class="undSlide" style="margin-left: auto;"></div>
+		    </button>
+		     <button class="nextSlide">
+		     	<a href="parallax.html"/> Next Carousel 
+		    	<div class="undSlide" ></div>
+		    </button>
+	    </div>
 	</body>
 </html>

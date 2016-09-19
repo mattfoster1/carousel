@@ -1,6 +1,7 @@
 @import "_animations.scss";
 @import "_mixins.scss";
 @import "_parallax.scss";
+@import "_vert.scss";
 
 * {
     margin: 0;
@@ -89,6 +90,11 @@ body {
 	.redSlide {
 		color: white;
 		background-color: #c42b2b;
+	}
+
+	.purpleSlide {
+		color: white;
+		background-color: #8640a3;
 	}
 
 }
