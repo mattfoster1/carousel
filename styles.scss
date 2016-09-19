@@ -128,7 +128,6 @@ body {
 	    z-index: 100;
 	    width: 12px;
 	    height: 12px;
-	    /*background-color: rgba(200,200,200,1);*/
 	    -webkit-border-radius: 50%;
 	    -moz-border-radius: 50%;
 	    border-radius: 50%;
@@ -249,10 +248,6 @@ input[type=radio]#button-1:checked~.arrows#arrow-5, input[type=radio]#button-2:c
     transform: scale(-0.6, 1);
 }
 
-// input[type=radio]#button-2:checked~.arrows#arrow-1 { left: -19px }
-// input[type=radio]#button-3:checked~.arrows#arrow-2 { left: -37px }
-// input[type=radio]#button-5:checked~.arrows#arrow-4 { left: -73px }
-
 .nextSlide {
 	font-size: 26px;
 	background-color: white;
@@ -278,6 +273,38 @@ input[type=radio]#button-1:checked~.arrows#arrow-5, input[type=radio]#button-2:c
 	}
 }
 
+@media screen and (max-width: 1300px) and (min-width: 801px) and (min-height: 1000px) and (orientation: portrait) {
+	
+	.nextSlide {
+		font-size: 42px;
+	}
 
+	.undSlide {
+		width: 100% !important;
+	}
 
+	#slideshow-wrap {
 
+		label:not(.arrows) {
+			height: 20px !important;
+			width: 20px !important;
+		}
+		label[for=button-1]:not(.arrows) {
+	    	margin-left: -72px;
+	    @include fadeOut;
+		}
+		label[for=button-2]:not(.arrows) {
+		    margin-left: -36px;
+		    @include fadeOut;
+		}
+		label[for=button-4]:not(.arrows) {
+		    margin-left: 36px;
+		    @include fadeOut;
+		}
+		label[for=button-5]:not(.arrows) {
+		    margin-left: 72px;
+		    @include fadeOut;
+		}
+
+	}
+}

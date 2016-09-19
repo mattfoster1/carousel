@@ -340,6 +340,13 @@
 #body_plx .slideshow_plx #slide5 {
   z-index: 1; }
 
+#body_plx .nextSlide .greyedOut {
+  cursor: default;
+  color: gray;
+  text-decoration: line-through; }
+  #body_plx .nextSlide .greyedOut .undSlide {
+    width: 0% !important; }
+
 #body_vert .slideshow_vert {
   width: 35%;
   height: 70%;
@@ -528,6 +535,93 @@
   #body_vert .slideshow_vert #slide5 {
     z-index: 1; }
 
+@media screen and (max-width: 1300px) and (min-width: 801px) and (min-height: 1000px) and (orientation: portrait) {
+  #body_vert .slideshow_vert {
+    height: 50%; }
+    #body_vert .slideshow_vert label:not(.arrows) {
+      margin-left: 20px !important; }
+    #body_vert .slideshow_vert label[for=button-1]:not(.arrows) {
+      margin-bottom: 84px;
+      margin-left: 5px; }
+    #body_vert .slideshow_vert label[for=button-2]:not(.arrows) {
+      margin-bottom: 42px;
+      margin-left: 5px; }
+    #body_vert .slideshow_vert label[for=button-3]:not(.arrows) {
+      margin-left: 5px; }
+    #body_vert .slideshow_vert label[for=button-4]:not(.arrows) {
+      margin-bottom: -42px;
+      margin-left: 5px; }
+    #body_vert .slideshow_vert label[for=button-5]:not(.arrows) {
+      margin-bottom: -84px;
+      margin-left: 5px; }
+    #body_vert .slideshow_vert input[type=radio]#button-1:checked ~ label[for=button-1] {
+      background-color: rgba(204, 51, 0, 0.6);
+      -webkit-transform: scale(-0.6, 1);
+      -moz-transform: scale(-0.6, 1);
+      -ms-transform: scale(-0.6, 1);
+      -o-transform: scale(-0.6, 1);
+      transform: rotate(45deg);
+      margin-left: 7px;
+      width: 10px;
+      height: 10px;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none; }
+    #body_vert .slideshow_vert input[type=radio]#button-2:checked ~ label[for=button-2] {
+      background-color: rgba(204, 51, 0, 0.6);
+      -webkit-transform: scale(-0.6, 1);
+      -moz-transform: scale(-0.6, 1);
+      -ms-transform: scale(-0.6, 1);
+      -o-transform: scale(-0.6, 1);
+      transform: rotate(45deg);
+      margin-left: 7px;
+      width: 10px;
+      height: 10px;
+      margin-bottom: 42px;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none; }
+    #body_vert .slideshow_vert input[type=radio]#button-3:checked ~ label[for=button-3] {
+      background-color: rgba(204, 51, 0, 0.6);
+      -webkit-transform: scale(-0.6, 1);
+      -moz-transform: scale(-0.6, 1);
+      -ms-transform: scale(-0.6, 1);
+      -o-transform: scale(-0.6, 1);
+      transform: rotate(45deg);
+      margin-left: 7px;
+      width: 10px;
+      height: 10px;
+      margin-bottom: 0px;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none; }
+    #body_vert .slideshow_vert input[type=radio]#button-4:checked ~ label[for=button-4] {
+      background-color: rgba(204, 51, 0, 0.6);
+      -webkit-transform: scale(-0.6, 1);
+      -moz-transform: scale(-0.6, 1);
+      -ms-transform: scale(-0.6, 1);
+      -o-transform: scale(-0.6, 1);
+      transform: rotate(45deg);
+      margin-left: 7px;
+      width: 10px;
+      height: 10px;
+      margin-bottom: -42px;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none; }
+    #body_vert .slideshow_vert input[type=radio]#button-5:checked ~ label[for=button-5] {
+      background-color: rgba(204, 51, 0, 0.6);
+      -webkit-transform: scale(-0.6, 1);
+      -moz-transform: scale(-0.6, 1);
+      -ms-transform: scale(-0.6, 1);
+      -o-transform: scale(-0.6, 1);
+      transform: rotate(45deg);
+      margin-left: 7px;
+      width: 10px;
+      height: 10px;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none; } }
 * {
   margin: 0;
   padding: 0; }
@@ -636,7 +730,6 @@ body {
     z-index: 100;
     width: 12px;
     height: 12px;
-    /*background-color: rgba(200,200,200,1);*/
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
@@ -770,5 +863,40 @@ input[type=radio]#button-1:checked ~ .arrows#arrow-5, input[type=radio]#button-2
     -o-transition: width 0.3s, background-color 1.8s; }
   .nextSlide :hover .undSlide {
     width: 100%; }
+
+@media screen and (max-width: 1300px) and (min-width: 801px) and (min-height: 1000px) and (orientation: portrait) {
+  .nextSlide {
+    font-size: 42px; }
+
+  .undSlide {
+    width: 100% !important; }
+
+  #slideshow-wrap label:not(.arrows) {
+    height: 20px !important;
+    width: 20px !important; }
+  #slideshow-wrap label[for=button-1]:not(.arrows) {
+    margin-left: -72px;
+    -webkit-transition: background-color 0.8s ease;
+    -moz-transition: background-color 0.8s ease;
+    -o-transition: background-color 0.8s ease;
+    transition: background-color 0.8s ease; }
+  #slideshow-wrap label[for=button-2]:not(.arrows) {
+    margin-left: -36px;
+    -webkit-transition: background-color 0.8s ease;
+    -moz-transition: background-color 0.8s ease;
+    -o-transition: background-color 0.8s ease;
+    transition: background-color 0.8s ease; }
+  #slideshow-wrap label[for=button-4]:not(.arrows) {
+    margin-left: 36px;
+    -webkit-transition: background-color 0.8s ease;
+    -moz-transition: background-color 0.8s ease;
+    -o-transition: background-color 0.8s ease;
+    transition: background-color 0.8s ease; }
+  #slideshow-wrap label[for=button-5]:not(.arrows) {
+    margin-left: 72px;
+    -webkit-transition: background-color 0.8s ease;
+    -moz-transition: background-color 0.8s ease;
+    -o-transition: background-color 0.8s ease;
+    transition: background-color 0.8s ease; } }
 
 /*# sourceMappingURL=styles.css.map */

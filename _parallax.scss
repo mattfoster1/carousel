@@ -166,3 +166,14 @@
 	#slide4 { z-index: 2; }
 	#slide5 { z-index: 1; }
 }
+
+#body_plx {
+	.nextSlide .greyedOut {
+		cursor:default;
+		color: gray;
+		text-decoration: line-through;
+		.undSlide {
+			width: 0% !important;
+		}
+	}
+}

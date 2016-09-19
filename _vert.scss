@@ -47,50 +47,30 @@
 	}
 
 	input[type=radio]#button-1:checked~label[for=button-1] {
-		// background-color: #CC3300;
-		background-color: rgba(204,51,0,0.6);
-		@include rotate_ninety_deg;
-		width: 10px;
-		height: 10px;
+		@include vert_button;
 		@include boxshadow_none;
 	}
 
 	input[type=radio]#button-2:checked~label[for=button-2] {
-		// background-color: #CC3300;
-		background-color: rgba(204,51,0,0.6);
-		@include rotate_ninety_deg;
-		width: 10px;
-		height: 10px;
+		@include vert_button;
 		margin-bottom: 23px;
 		@include boxshadow_none;
 	}
 
 	input[type=radio]#button-3:checked~label[for=button-3] {
-		// background-color: #CC3300;
-		background-color: rgba(204,51,0,0.6);
-		@include rotate_ninety_deg;
-		width: 10px;
-		height: 10px;
+		@include vert_button;
 		margin-bottom: 2px;
 		@include boxshadow_none;
 	}
 
 	input[type=radio]#button-4:checked~label[for=button-4] {
-		// background-color: #CC3300;
-		background-color: rgba(204,51,0,0.6);
-		@include rotate_ninety_deg;
-		width: 10px;
-		height: 10px;
+		@include vert_button;
 		margin-bottom: -19px;
 		@include boxshadow_none;
 	}
 
 	input[type=radio]#button-5:checked~label[for=button-5] {
-		// background-color: #CC3300;
-		background-color: rgba(204,51,0,0.6);
-		@include rotate_ninety_deg;
-		width: 10px;
-		height: 10px;
+		@include vert_button;
 		@include boxshadow_none;
 	}
 
@@ -159,4 +139,65 @@
 	#slide3 { z-index: 3; }
 	#slide4 { z-index: 2; }
 	#slide5 { z-index: 1; }
+}
+
+@media screen and (max-width: 1300px) and (min-width: 801px) and (min-height: 1000px) and (orientation: portrait) {
+	#body_vert .slideshow_vert {
+		height: 50%;
+
+		label:not(.arrows) {
+			margin-left: 20px !important;
+		}
+		label[for=button-1]:not(.arrows) {
+		    margin-bottom: 84px;
+		    margin-left: 5px;
+		}
+
+		label[for=button-2]:not(.arrows) {
+		    margin-bottom: 42px;
+		    margin-left: 5px;
+		}
+
+		label[for=button-3]:not(.arrows) {
+		    margin-left: 5px;
+		}
+
+		label[for=button-4]:not(.arrows) {
+		    margin-bottom: -42px;
+		    margin-left: 5px;
+		}
+
+		label[for=button-5]:not(.arrows) {
+		    margin-bottom: -84px;
+		    margin-left: 5px;
+		}
+		input[type=radio]#button-1:checked~label[for=button-1] {
+		@include vert_button;
+		@include boxshadow_none;
+		}
+
+		input[type=radio]#button-2:checked~label[for=button-2] {
+			@include vert_button;
+			margin-bottom: 42px;
+			@include boxshadow_none;
+		}
+
+		input[type=radio]#button-3:checked~label[for=button-3] {
+			@include vert_button;
+			margin-bottom: 0px;
+			@include boxshadow_none;
+		}
+
+		input[type=radio]#button-4:checked~label[for=button-4] {
+			@include vert_button;
+			margin-bottom: -42px;
+			@include boxshadow_none;
+		}
+
+		input[type=radio]#button-5:checked~label[for=button-5] {
+			@include vert_button;
+			@include boxshadow_none;
+		}
+
+	}
 }
