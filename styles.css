@@ -349,6 +349,7 @@
 
 #body_vert .slideshow_vert {
   width: 35%;
+  max-width: 400px;
   height: 70%;
   margin-top: 50px;
   margin-bottom: 50px; }
