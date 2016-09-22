@@ -58,15 +58,15 @@
 }
 
 @mixin card_boxShad {
-    -webkit-box-shadow: 2px 0px 10px gray;
-    -moz-box-shadow: 2px 0px 10px gray;
-    box-shadow: 2px 0px 10px gray;
+    -webkit-box-shadow: -4px 0px 22px black;
+    -moz-box-shadow: -4px 0px 22px black;
+    box-shadow: -4px 0px 22px black;
 }
 
 @mixin card_boxShad_vert {
-    -webkit-box-shadow: 0px 2px 10px gray;
-    -moz-box-shadow: 0px 2px 10px gray;
-    box-shadow: 0px 2px 10px gray;
+    -webkit-box-shadow: 0px -4px 22px black;
+    -moz-box-shadow: 0px -4px 22px black;
+    box-shadow: 0px -4px 22px black;
 }
 
 @mixin transition_all {
