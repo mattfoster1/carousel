@@ -23,7 +23,6 @@ a {
 
 html {
 	height: 100%;
-	min-height: 100%;
 }
 
 body {
@@ -274,30 +273,47 @@ input[type=radio]#button-1:checked~.arrows#arrow-5, input[type=radio]#button-2:c
 .slideNav {
 	position: absolute;
 	bottom: 75px;
-	width: auto;
+	width: 100%;
 	margin: auto;
 	height: 50px;
+
+	.greyedOut + .undSlide {
+		width: 0%;
+	}
+
+	@include flex_plain;
+	justify-content: space-around;
+
+	.nextSlide {
+		
+		text-align: left;
+	} 
 }
 
+// vv mobile vv
 @media screen and (max-width: 1300px) and (min-width: 801px) and (min-height: 1000px) and (orientation: portrait) {
 	
 	.nextSlide {
 		font-size: 42px;
 	}
 
-	.undSlide {
-		width: 100% !important;
+
+	.slideNav {
+		bottom: 200px;
+
+		.undSlide {
+			width: 100%;
+		}
 	}
 
 	#slideshow-wrap {
-
 		label:not(.arrows) {
 			height: 20px !important;
 			width: 20px !important;
 		}
 		label[for=button-1]:not(.arrows) {
 	    	margin-left: -72px;
-	    @include fadeOut;
+	    	@include fadeOut;
 		}
 		label[for=button-2]:not(.arrows) {
 		    margin-left: -36px;
@@ -311,6 +327,8 @@ input[type=radio]#button-1:checked~.arrows#arrow-5, input[type=radio]#button-2:c
 		    margin-left: 72px;
 		    @include fadeOut;
 		}
-
+		#slideshow-inner ul>li div {
+			font-size: 80px;
+		}
 	}
 }
