@@ -70,15 +70,10 @@
 }
 
 @mixin transition_all {
-    // -webkit-transition: background-color 1.5s, box-shadow 2s ease-in;
-    // -moz-transition: background-color 1.5s, box-shadow 2s ease-in;
-    // -o-transition: background-color 1.5s, box-shadow 2s ease-in;
-    // transition: background-color 1.5s, box-shadow 2s ease-in;
-
-    -webkit-transition: all 0.5s !important;
-    -moz-transition: all 0.5s !important;
-    -o-transition: all 0.5s !important;
-    transition: all 0.5s !important;
+    -webkit-transition: all 0.5s ease-in-out !important;
+    -moz-transition: all 0.5s ease-in-out !important;
+    -o-transition: all 0.5s ease-in-out !important;
+    transition: all 0.5s ease-in-out !important;
 }
 
 @mixin boxshadow_none {
