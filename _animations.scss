@@ -8,14 +8,10 @@
 	width: 100%;
 	align-items: center;
 	justify-content: center;
-
-	/*font-family: open sans condensed, sans serif;*/
 	font-family: Fjalla One, sans-serif;
 	font-size: 35px;
 	white-space: nowrap;
 	text-align: center;
-	
-	/*background-color: lightblue;*/
 }
 
 .two_line {
@@ -30,9 +26,6 @@
 #two_line0 {
 	animation: two_play_zero 12s 15 forwards;
 	z-index: 3;
-	/*background-color: red;*/
-	/*color: red;*/
-	/*padding-left: 30px;*/
 }
 
 @keyframes two_play_zero {
@@ -76,9 +69,6 @@
 #two_line1 {
 	animation: two_play_one 12s 15 forwards;
 	z-index: 2;
-	/*background-color: green;*/
-	/*color: green;*/
-	/*padding-left: 30px;*/
 }
 
 @keyframes two_play_one {

@@ -6,12 +6,10 @@
   width: 100%;
   align-items: center;
   justify-content: center;
-  /*font-family: open sans condensed, sans serif;*/
   font-family: Fjalla One, sans-serif;
   font-size: 35px;
   white-space: nowrap;
-  text-align: center;
-  /*background-color: lightblue;*/ }
+  text-align: center; }
 
 .two_line {
   position: absolute;
@@ -22,10 +20,7 @@
 
 #two_line0 {
   animation: two_play_zero 12s 15 forwards;
-  z-index: 3;
-  /*background-color: red;*/
-  /*color: red;*/
-  /*padding-left: 30px;*/ }
+  z-index: 3; }
 
 @keyframes two_play_zero {
   0% {
@@ -57,10 +52,7 @@
     opacity: 0; } }
 #two_line1 {
   animation: two_play_one 12s 15 forwards;
-  z-index: 2;
-  /*background-color: green;*/
-  /*color: green;*/
-  /*padding-left: 30px;*/ }
+  z-index: 2; }
 
 @keyframes two_play_one {
   0%, 10% {
@@ -712,7 +704,7 @@ body {
   width: 90%;
   min-width: 260px;
   max-width: 1200px;
-  margin: 100px auto 0px auto;
+  margin: 0px auto 0px auto;
   border: 1px solid #a7a7a7;
   -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
   -moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
@@ -820,7 +812,7 @@ label.arrows {
   display: none;
   opacity: 0.3;
   cursor: pointer;
-  z-index: 1000;
+  z-index: 100;
   background-color: transparent;
   -webkit-transition: opacity .2s;
   -moz-transition: opacity .2s;
